@@ -29,7 +29,7 @@ class Loader
                     get_stylesheet_directory() . '/models');
 
         $this->path = (has_filter('sober/models/path') ? 
-                    apply_filters('sober/models/path', rtrim($this->path)) : 
+                    apply_filters('sober/models/path', rtrim($this->path ?: '')) :
                     $default);
     }
 
